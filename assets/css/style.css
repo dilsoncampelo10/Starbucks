@@ -11,7 +11,7 @@ body{
 }
 .bar{
     background-color: #006231;
-    width: 168px;
+    max-width: 168px;
     height: 22px;
 }
 h1{
@@ -32,7 +32,6 @@ h2{
 }
 p{
     color: #454545;
-    
 }
 .button{
     display: inline-block;
@@ -105,7 +104,6 @@ header .line{
 }
 .area1 .area1-content{
     padding: 80px;
-    
 }
 .area1 .area1-img1{
     background-image: url(../images/f2.jpg);
@@ -121,7 +119,7 @@ header .line{
     grid-column: 2/3;
 }
 .area1 .area1-content .area1-description{
-    width: 460px;
+    max-width: 460px;
     margin-top: 30px;
     margin-bottom: 50px;
     line-height: 25px;
@@ -150,7 +148,7 @@ header .line{
     background-size: cover;
 }
 .area2 .area2-content .area2-description{
-    width: 450px;
+    max-width: 450px;
     margin-top: 30px;
     margin-bottom: 50px;
     line-height: 25px;
@@ -174,7 +172,7 @@ header .line{
     background-position: center;
 }
 .area3 .area3-content .area3-description{
-    width: 430px;
+    max-width: 430px;
     margin-top: 30px;
     margin-bottom: 50px;
     line-height: 25px;
@@ -221,4 +219,72 @@ footer a{
 footer p{
     margin-bottom: 50px;
     color: white;
+}
+
+@media (max-width:1024px){
+    .container{
+        padding: 0 20px;
+    }
+}
+@media (max-width:768px){
+    .area1, .area3{
+        grid-template-columns: 1fr 250px;
+    }
+    .area2{
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+@media (max-width:425px){
+    .itens-header .search input{
+        max-width: 100px;
+    }
+    .itens-header .search button{
+        margin-right: 20px;
+    }
+    h1{
+        font-size: 3rem;
+        max-width: 300px;
+    }
+    h2{
+        font-size: 1.7rem;
+        max-width: 300px;
+    }
+    p{
+        font-size: 11px;
+    }
+    .button{
+        font-size: 11px;
+        padding: 5px 20px;
+    }
+    .banner-images img{
+        border: 2px solid #117050;
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+    }
+    .banner p{
+        width: 150px;
+    }
+    .area1, .area2, .area3, .area4{
+        grid-template-columns: 1fr;
+    }
+    .area1 .area1-content, .area2 .area2-content,
+    .area3 .area3-content, .area4 .area4-content{
+        padding: 30px;
+    }
+    .area5{
+        height: 200px;
+    }
+    footer{
+        height: 30px;
+        padding-top: 10px;
+    }
+    footer p{
+        margin-bottom: 10px;
+        color: white;
+    }
+    footer a{
+        font-size: 11px;
+    }
 }
